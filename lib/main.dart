@@ -2,11 +2,14 @@ import 'package:flutter/material.dart';
 
 void test() {
   const name = 'Foo';
-  if (name == 'Foo') {
-    print('This is Foo');
-  } else {
-    print('No...');
-  }
+  String name20 = name * 20;
+  print(name20);
+}
+
+void test2() {
+  var names = ['Foo', 'Bar', 'Baz'];
+  names.add('Hello');
+  print(names.length);
 }
 
 void main() {
@@ -19,7 +22,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    test();
+    test2();
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
