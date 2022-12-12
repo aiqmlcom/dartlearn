@@ -3,9 +3,7 @@ import 'package:flutter/material.dart';
 const age = 27;
 const another = 33;
 
-String getFullName(String firstName, String lastName) {
-  return '$firstName $lastName';
-}
+String getFullName(String firstName, String lastName) => '$firstName $lastName';
 
 void printMyName() {
   print('Yes Name is Here...');
