@@ -6,10 +6,22 @@ void test() {
   print(name20);
 }
 
+void sets() {
+  var name = {'Foo', 'Bar', 'Baz'};
+  name.add('Foo');
+  name.add('foo');
+  print(name);
+}
+
 void test2() {
   var names = ['Foo', 'Bar', 'Baz'];
   names.add('Hello');
   print(names.length);
+}
+
+void mapx() {
+  var person = {'age': 20, 'name': 'Hello'};
+  print(person.entries);
 }
 
 void main() {
@@ -22,7 +34,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    test2();
+    mapx();
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
