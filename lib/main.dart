@@ -20,11 +20,11 @@ void test2() {
 }
 
 void mapx() {
-  List<String?>? names = ['Hello', 'World', null];
-  // names = null;
+  const String? firstName = null;
+  const String? middleName = null;
+  const String? lastName = 'Baz';
 
-  int? age = 20;
-  age = null;
+  const String? names = firstName ?? middleName ?? lastName;
 
   print(names);
 }
