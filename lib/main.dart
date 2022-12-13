@@ -1,11 +1,17 @@
 import 'package:flutter/material.dart';
 
-Future<int> heavyFunctionThatMultipliesByTwo(int a) =>
-    Future.delayed(const Duration(seconds: 2), () => a * 2);
+Stream<String> getName() {
+  return Stream.periodic(const Duration(seconds: 1), (value) {
+    return 'Foo';
+  });
+}
 
 void test() async {
-  final result = await heavyFunctionThatMultipliesByTwo(10);
-  print(result);
+  await for (final value in getName()) {
+    print(value);
+  }
+
+  print('Stream finished');
 }
 
 void main() {
