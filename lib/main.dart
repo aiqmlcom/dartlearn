@@ -20,8 +20,13 @@ void test2() {
 }
 
 void mapx() {
-  var person = {'age': 20, 'name': 'Hello'};
-  print(person.entries);
+  List<String?>? names = ['Hello', 'World', null];
+  // names = null;
+
+  int? age = 20;
+  age = null;
+
+  print(names);
 }
 
 void main() {
