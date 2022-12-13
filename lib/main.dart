@@ -1,18 +1,23 @@
 import 'package:flutter/material.dart';
 
 class Person {
+  final String name;
+
+  Person(this.name);
+
   void run() {
-    print('running...');
+    print(name + ' is running...');
   }
 
   void breathe() {
-    print('breathing...');
+    print(name + ' is breathing...');
   }
 }
 
 void test() {
-  final person = Person();
+  final person = Person('Foo');
   person.run();
+  person.breathe();
 }
 
 void main() {
