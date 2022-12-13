@@ -19,14 +19,11 @@ void test2() {
   print(names.length);
 }
 
-void mapx() {
-  const String? firstName = null;
-  const String? middleName = null;
-  const String? lastName = 'Baz';
+void mapx(String? firstName, String? middleName, String? lastName) {
+  String? name = firstName;
+  name ??= 'Hello';
 
-  const String? names = firstName ?? middleName ?? lastName;
-
-  print(names);
+  print(name);
 }
 
 void main() {
@@ -39,7 +36,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    mapx();
+    mapx(null, 'Bar', 'Baz');
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
