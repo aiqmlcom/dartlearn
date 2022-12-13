@@ -1,40 +1,11 @@
 import 'package:flutter/material.dart';
 
-abstract class LivingThing {
-  void move() {
-    print('I am moving');
-  }
-}
+Future<int> heavyFunctionThatMultipliesByTwo(int a) =>
+    Future.delayed(const Duration(seconds: 2), () => a * 2);
 
-class Person extends LivingThing {
-  final String name;
-
-  Person(this.name);
-
-  void run() {
-    print(name + ' is running...');
-  }
-
-  void breathe() {
-    print(name + ' is breathing...');
-  }
-}
-
-class Cat {
-  final String name;
-
-  Cat(this.name);
-}
-
-extension Run on Cat {
-  void run() {
-    print('Cat $name is running...');
-  }
-}
-
-void test() {
-  final meow = Cat('Fluffers');
-  meow.run();
+void test() async {
+  final result = await heavyFunctionThatMultipliesByTwo(10);
+  print(result);
 }
 
 void main() {
