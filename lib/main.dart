@@ -1,6 +1,12 @@
 import 'package:flutter/material.dart';
 
-class Person {
+abstract class LivingThing {
+  void move() {
+    print('I am moving');
+  }
+}
+
+class Person extends LivingThing {
   final String name;
 
   Person(this.name);
@@ -16,8 +22,7 @@ class Person {
 
 void test() {
   final person = Person('Foo');
-  person.run();
-  person.breathe();
+  person.move();
 }
 
 void main() {
