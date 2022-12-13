@@ -1,29 +1,9 @@
 import 'package:flutter/material.dart';
 
+enum PersonProperties { firstName, lastName, age }
+
 void test() {
-  const name = 'Foo';
-  String name20 = name * 20;
-  print(name20);
-}
-
-void sets() {
-  var name = {'Foo', 'Bar', 'Baz'};
-  name.add('Foo');
-  name.add('foo');
-  print(name);
-}
-
-void test2() {
-  var names = ['Foo', 'Bar', 'Baz'];
-  names.add('Hello');
-  print(names.length);
-}
-
-void nullops(List<String>? names) {
-  int noOfNames = names?.length ?? 0;
-
-  print(names);
-  print(noOfNames);
+  print(PersonProperties.firstName);
 }
 
 void main() {
@@ -36,7 +16,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    nullops(null);
+    test();
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
