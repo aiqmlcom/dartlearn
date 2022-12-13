@@ -19,12 +19,11 @@ void test2() {
   print(names.length);
 }
 
-void mapx(String? firstName, String? middleName, String? lastName) {
-  String? name = firstName;
-  name ??= middleName;
-  name ??= lastName;
+void nullops(List<String>? names) {
+  int noOfNames = names?.length ?? 0;
 
-  print(name);
+  print(names);
+  print(noOfNames);
 }
 
 void main() {
@@ -37,7 +36,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    mapx(null, null, 'Baz');
+    nullops(null);
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
