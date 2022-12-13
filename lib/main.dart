@@ -20,9 +20,17 @@ class Person extends LivingThing {
   }
 }
 
+class Cat {
+  final String name;
+
+  Cat(this.name);
+
+  factory Cat.fluffBall() => Cat('Fluff ball');
+}
+
 void test() {
-  final person = Person('Foo');
-  person.move();
+  final cat = Cat.fluffBall();
+  print(cat.name);
 }
 
 void main() {
