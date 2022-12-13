@@ -26,11 +26,21 @@ class Cat {
   Cat(this.name);
 
   factory Cat.fluffBall() => Cat('Fluff ball');
+
+  @override
+  bool operator ==(covariant Cat other) => other.name == name;
+
+  @override
+  int get hashCode => name.hashCode;
 }
 
 void test() {
-  final cat = Cat.fluffBall();
-  print(cat.name);
+  final cat1 = Cat('Foo');
+  final cat2 = Cat('Foo');
+  print(cat1.name);
+  print(cat2.name);
+
+  if (cat1 == cat2) print('They are the same');
 }
 
 void main() {
