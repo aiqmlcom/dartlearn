@@ -24,23 +24,17 @@ class Cat {
   final String name;
 
   Cat(this.name);
+}
 
-  factory Cat.fluffBall() => Cat('Fluff ball');
-
-  @override
-  bool operator ==(covariant Cat other) => other.name == name;
-
-  @override
-  int get hashCode => name.hashCode;
+extension Run on Cat {
+  void run() {
+    print('Cat $name is running...');
+  }
 }
 
 void test() {
-  final cat1 = Cat('Foo');
-  final cat2 = Cat('Foo');
-  print(cat1.name);
-  print(cat2.name);
-
-  if (cat1 == cat2) print('They are the same');
+  final meow = Cat('Fluffers');
+  meow.run();
 }
 
 void main() {
