@@ -1,19 +1,18 @@
 import 'package:flutter/material.dart';
 
-enum AnimalType { cat, dog, bunny }
-
-void test(AnimalType animalType) {
-  switch (animalType) {
-    case AnimalType.bunny:
-      print('Bunny');
-      break;
-    case AnimalType.cat:
-      print('Cat');
-      break;
-    case AnimalType.dog:
-      print('Dog');
-      break;
+class Person {
+  void run() {
+    print('running...');
   }
+
+  void breathe() {
+    print('breathing...');
+  }
+}
+
+void test() {
+  final person = Person();
+  person.run();
 }
 
 void main() {
@@ -26,7 +25,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    test(AnimalType.dog);
+    test();
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
